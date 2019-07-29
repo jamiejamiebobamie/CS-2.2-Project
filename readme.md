@@ -14,11 +14,9 @@ D
 ("Location F", "Location H", 10)
 ("Location F", "Sewage Treatment Plant", 90)
 
-...model the flow sewage.
+...model the flow of sewage.
 
 Possible algorithms and problems to solve:
 What is the longest path that sewage can travel in the graph (diameter).
 What is the shortest path that sewage can travel through the system that connects the entire system (minimum spanning tree)?
 Are there any locations where sewage does not travel to the "Sewage Treatment Plant?"
-
-NOTE: The sewage treatment plant is the last vertex in the list of vertices on the second line of the graph file.
