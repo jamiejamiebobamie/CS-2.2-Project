@@ -1,0 +1,17 @@
+D
+Location A,Location B,Location C,Location D,Location E,Location F,Location G,Location H,Sewage Treatment Plant
+Location A,Location A,4
+Location B,Location A,4
+Location A,Location D,4
+Location B,Location C,4
+Location D,Location B,1
+Location E,Location F,4
+Location F,Location F,4
+Location C,Location D,5
+Location A,Location B,2
+Location A,Location B,52
+Location F,Location H,10
+Location G,Location H,4
+Location F,Sewage Treatment Plant,90
+Location C,Sewage Treatment Plant,35
+Location A,Sewage Treatment Plant,35

@@ -121,12 +121,12 @@ class LinkedList(object):
             return "No out-going edges."
         if self.head != self.tail:
             while node:
-                result.append((int(self.id),node.data,node.weight))
+                result.append((self.id,node.data,node.weight))
                 node = node.next
             else:
                 return result
         else:
-            return (int(self.id),node.data,node.weight)
+            return ((self.id,node.data,node.weight))
 
 class LinkedListNode(object):
     def __init__(self, data, weight=1):

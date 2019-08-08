@@ -10,7 +10,7 @@ def find_path(graph, nodeA, nodeB):
         # returns the vertices index in the graph if present
         # otherwise returns False
         for i, v in enumerate(graph.vertices):
-            if int(v.id) == int(vertex_id):
+            if v.id == vertex_id:
                 return i
         return -1 # -1 is equivalent to false in this context as indices are range from 0 to len(graph.vertices)-1
 
@@ -21,7 +21,7 @@ def find_path(graph, nodeA, nodeB):
         for v in nodeA.getNeighbors():
             if v == nodeA.id:
                 return [nodeA.id]
-        return "The node_to and the node_from are the same node, but there is no self-pointing edges."
+        return ["The node_to and the node_from are the same node, but there is no self-pointing edges."]
 
     # check to see if the nodes are in the graph.
     nodeA_index = findVertexIndex(nodeA.id)
@@ -67,7 +67,7 @@ def find_path(graph, nodeA, nodeB):
             else:
                 return str(vertex) + " is not in the graph."
     else:
-        return "There is no path from "+ nodeA.id +" to " + nodeB.id +"."
+        return ["There is no path from "+ nodeA.id +" to " + nodeB.id +"."]
 
     return "Empty graph." # the program should not run this code.
 
