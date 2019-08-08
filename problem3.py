@@ -6,6 +6,7 @@ from graph_adt_list import *
 from DFS import *
 
 if __name__ == "__main__":
+    print("using data from: graph_data.txt")
     vertices, edges = readGraph("graph_data.txt")
     new_graph = LLGraph(vertices)
     new_graph.addEdges(edges)
@@ -24,6 +25,7 @@ if __name__ == "__main__":
     else:
         print("All locations lead to the sewage treatment plant! Hooray!")
 
+    print("\nusing data from: graph_data1.txt")
     vertices, edges = readGraph("graph_data1.txt")
     new_graph = LLGraph(vertices)
     new_graph.addEdges(edges)

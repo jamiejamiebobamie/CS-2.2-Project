@@ -29,13 +29,10 @@ def primMST(graph,edges):
         visited.append(vertex) # append the new vertex to the visited array
 
         for i, edge in enumerate(edges):
-            print(i)
             if float(edge[2]) < float(minEdge[2]) and edge[1] not in visited and edge[0] in visited and edge[0] != edge[1]:
                 minEdge = edge
                 minEdge_index = i
-                print('changed', minEdge_index)
 
-        print(len(edges), minEdge_index)
         edges.pop(minEdge_index-1)
 
         MST.append(minEdge)
