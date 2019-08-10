@@ -9,7 +9,7 @@ from prims import *
 
 
 if __name__ == "__main__":
-    vertices, edges = readGraph("graph_data1.txt")
+    vertices, edges = read_graph("graph_data1.txt")
     new_graph = LLGraph(vertices)
     new_graph.addEdges(edges)
 

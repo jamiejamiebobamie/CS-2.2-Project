@@ -6,7 +6,7 @@ from graph_adt_list import *
 from DFS import *
 
 if __name__ == "__main__":
-    vertices, edges = readGraph("graph_data.txt")
+    vertices, edges = read_graph("graph_data.txt")
     new_graph = LLGraph(vertices)
     new_graph.addEdges(edges)
 
@@ -16,7 +16,6 @@ if __name__ == "__main__":
         for NodeB in new_graph.vertices:
             store_max = current_max
             test_path = find_path(new_graph, NodeA, NodeB)
-            print(test_path)
             current_max = max(current_max,len(test_path))
             if store_max != current_max:
                 max_path = test_path

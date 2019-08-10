@@ -1,7 +1,6 @@
 import sys
 
-
-def readGraph(filepath):
+def read_graph(filepath):
     """input file should be of form:
         G
         1,2,3,4,5

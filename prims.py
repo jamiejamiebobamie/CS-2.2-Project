@@ -12,6 +12,16 @@ def primMST(graph,edges):
     in both to_vert and from_vert positions in:
     [to_vert, from_vert, weight]
     """
+    test_set_from_vert = set()
+    test_set_to_vert = set()
+
+    for from_vert,to_vert,weight in edges:
+        test_set_from_vert.add(from_vert)
+        test_set_to_vert.add(to_vert)
+    if not len(test_set_from_vert) == len(test_set_to_vert) == len(graph.vertices):
+        return "For this algorithm to work, each of your vertices need to be present at least once in both the to_vert and from_vert edges."
+
+
 
     # choose a random index
     index = random.randint(0, graph.numberOfVertices-1)

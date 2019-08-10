@@ -7,7 +7,7 @@ from DFS import *
 
 if __name__ == "__main__":
     print("using data from: graph_data.txt")
-    vertices, edges = readGraph("graph_data.txt")
+    vertices, edges = read_graph("graph_data.txt")
     new_graph = LLGraph(vertices)
     new_graph.addEdges(edges)
     sewage_plant = None
