@@ -26,7 +26,7 @@ if __name__ == "__main__":
         print("All locations lead to the sewage treatment plant! Hooray!")
 
     print("\nusing data from: graph_data1.txt")
-    vertices, edges = readGraph("graph_data1.txt")
+    vertices, edges = read_graph("graph_data1.txt")
     new_graph = LLGraph(vertices)
     new_graph.addEdges(edges)
     sewage_plant = None
