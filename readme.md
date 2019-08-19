@@ -1,7 +1,7 @@
 This repo contains the final project for my CS-2.2-Graphs class at Make School.
 
-Given graph:
-Given an input file of sewage origin points and sewage end points (vertices) and pipes (directed weighted edges):
+Given an input file of sewage origin points and sewage end points
+(vertices) and pipes (directed weighted edges):
 
 D
 ("Location A", "Location B", "Location C", "Location D", "Location E", "Location F", "Location G", "Location H", "Sewage Treatment Plant")
@@ -18,5 +18,7 @@ D
 
 Possible algorithms and problems to solve:
 What is the longest path that sewage can travel in the graph (diameter).
-What is the shortest path that sewage can travel through the system that connects the entire system (minimum spanning tree)?
-Are there any locations where sewage does not travel to the "Sewage Treatment Plant?"
+What is the shortest path that sewage can travel through the system that
+    connects the entire system (minimum spanning tree)?
+Are there any locations where sewage does not
+    travel to the "Sewage Treatment Plant?"

@@ -10,7 +10,8 @@ def read_graph(filepath):
         (2,4)
         (2,5)
         (3,5)
-    returns an array of vertices (ints) and and array of edges (tuple of two vertices: source to target)
+    returns an array of vertices (ints) and
+    an array of edges (tuple of two vertices: source to target)
     """
 
     edges = []
@@ -24,8 +25,8 @@ def read_graph(filepath):
         if i == 0: # the first entry is the type of the graph
             graphType = entry
         elif i == 1: # the second entry is a list of vertices
-            listOfVertices = entry.split(",") # parse the string to get all numbers
-        elif i > 1 and len(entry) > 0: # takes into account empty lines and lines not of the correct format
+            listOfVertices = entry.split(",") # parse the string to get all #s
+        elif i > 1 and len(entry) > 0: # takes into account empty lines
             listOfEdges = entry.split(",")
             # print(listOfEdges)
             if graphType == "G": # an undirected graph has "mirrored" edges
@@ -33,7 +34,8 @@ def read_graph(filepath):
                 edges.append((listOfEdges[1], listOfEdges[0]))
             else:
                 if len(entry) > 5:
-                    edges.append((listOfEdges[0], listOfEdges[1], listOfEdges[2]))
+                    edges.append((listOfEdges[0],
+                        listOfEdges[1], listOfEdges[2]))
                 else:
                     edges.append((listOfEdges[0], listOfEdges[1], 1))
 

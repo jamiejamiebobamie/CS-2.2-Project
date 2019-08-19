@@ -12,7 +12,10 @@ class LLGraph(object):
 
     def getVertex(self, n):
         """returns the associated LinkedList object if it exists."""
-        return self.vertices[n-1] if n-1 < self.numberOfVertices and n > 0 else "Vertex index out of bounds. Please enter a vertex id between 1 and " + str(self.numberOfVertices) + "."
+        if n-1 < self.numberOfVertices and n > 0:
+            return self.vertices[n-1]
+        else:
+            return "Vertex index out of bounds. < " + str(self.numberOfVertices)
 
     def getVertices(self):
         """returns the id's/data of all the vertices in the graph"""
@@ -32,7 +35,8 @@ class LLGraph(object):
         return self.vertices[vertex-1].getEdges()
 
     def addEdge(self, f, t, cost=1):
-        """add an edge from vertex f (a number) to vertex t (a number) with a default cost/weight of 1
+        """add an edge from vertex f (a number)
+        to vertex t (a number) with a default cost/weight of 1
         """
         for i, v in enumerate(self.vertices):
             f = str(f)
@@ -59,7 +63,8 @@ class LLGraph(object):
         self.vertices.append(new_linked_list)
 
     def findVertexIndex(self, vertex_id):
-        """vertex argument is a string that is the label or id of the vertex , NOT a linkedlist object
+        """vertex argument is a string that is the label or id of
+        the vertex , NOT a linkedlist object
         returns the vertices index in the graph if present
         otherwise returns False
         admittedly this should be a method of the graph class...
