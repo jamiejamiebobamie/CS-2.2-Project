@@ -33,7 +33,7 @@ def primMST(graph,edges):
 
     MST = []
     visited = []
-    
+
     # [to_vert, from_vert, weight]
     minEdge = [None,None,float('inf')]
 
@@ -59,14 +59,3 @@ def primMST(graph,edges):
         minEdge = [None,None,float('inf')]
 
     return MST
-
-
-if __name__ == "__main__":
-
-    filePath = "graph_data.txt"
-    vertices, edges = readGraph(filePath)
-
-    graph = LLGraph(vertices)
-    graph.addEdges(edges)
-
-    print(primMST(graph, edges))

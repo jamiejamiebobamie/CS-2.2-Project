@@ -103,11 +103,11 @@ assert newer_graph.getEdges(1) == [('Location A', 'Location A', '4'),
 assert (find_path(new_graph, new_graph.vertices[0], new_graph.vertices[0])
         == ['Location A'])
 
-# PLEASE FORGIVE THE FORMATTING OF THESE:
-
 # testing paths to the same vertex that DOES NOT have a path:
 assert (find_path(new_graph, new_graph.vertices[1], new_graph.vertices[1])
-== ['The node_to and the node_from are the same node, but there is no self-pointing edges.'])
+== ["""The node_to and the node_from are the same node,
+                but there is no self-pointing edges."""])
+
 # testing the path from one vertex to another that are ADJACENT:
 assert find_path(newer_graph, newer_graph.vertices[0],
 newer_graph.vertices[1]) == ['Location A', 'Location B']
@@ -118,60 +118,6 @@ new_graph.vertices[2])
 # testing the findpath method on vertices that DO NOT have a path to one another:
 assert find_path(new_graph, new_graph.vertices[4],
 new_graph.vertices[2]) == ['There is no path from Location E to Location C.']
-
-# testing prim's on a graph with all vertices
-# present in both the to_vert and the from_vert positions
-prims_set = set(primMST(newer_graph, edges2))
-print(prims_set)
-assert prims_set == {('Location A', 'Location B', '2'), ('Location A', 'Location C', '4'), ('Location E', 'Location H', '4'), ('Location E', 'Location G', '4'), ('Location G', 'Location A', '4'), ('Location E', 'Sewage Treatment Plant', '4'), ('Location D', 'Location F', '1'), ('Location B', 'Location D', '4')}
-# ([('Location E', 'Location G', '4'),
-# ('Location E', 'Location H', '4'),
-# ('Location E', 'Sewage Treatment Plant', '4'),
-# ('Location G', 'Location A','4'),
-# ('Location A', 'Location B', '2'),
-# ('Location A', 'Location C', '4'), ('Location B', 'Location D', '4'),
-# ('Location D', 'Location F', '1')] or
-# [('Location F', 'Location G', '4'),
-# ('Location F', 'Location H', '4'),
-# ('Location F', 'Sewage Treatment Plant', '4'),
-# ('Location G', 'Location A', '4'), ('Location A', 'Location B', '2'),
-# ('Location A', 'Location C', '4'), ('Location B', 'Location D', '4'),
-# ('Location D', 'Location E', '1')] or [('Location C', 'Location D', '5'),
-# ('Location D', 'Location E', '1'), ('Location D', 'Location F', '1'),
-# ('Location D', 'Location G', '1'), ('Location E', 'Location H', '4'),
-# ('Location E', 'Sewage Treatment Plant', '4'),
-# ('Location G', 'Location A', '4'),
-# ('Location A', 'Location B', '2')] or
-# [('Location H', 'Location A', '4'), ('Location A', 'Location B', '2'),
-# ('Location A', 'Location C', '4'), ('Location B', 'Location D', '4'),
-# ('Location D', 'Location E', '1'), ('Location D', 'Location F', '1'),
-# ('Location D', 'Location G', '1'),
-# ('Location E', 'Sewage Treatment Plant', '4')] or
-# [('Location A', 'Location B', '2'), ('Location A', 'Location C', '4'),
-# ('Location B', 'Location D', '4'), ('Location D', 'Location E', '1'),
-# ('Location D', 'Location F', '1'), ('Location D', 'Location G', '1'),
-# ('Location E', 'Location H', '4'),
-# ('Location E', 'Sewage Treatment Plant', '4')] or
-# [('Location G', 'Location H', '4'),
-# ('Location G', 'Sewage Treatment Plant', '4'),
-# ('Location G', 'Location A', '4'), ('Location A', 'Location B', '2'),
-# ('Location A', 'Location C', '4'), ('Location B', 'Location D', '4'),
-# ('Location D', 'Location E', '1'), ('Location D', 'Location F', '1')] or
-# [('Location B', 'Location C', '4'), ('Location B', 'Location D', '4'),
-# ('Location D', 'Location E', '1'), ('Location D', 'Location F', '1'),
-# ('Location D', 'Location G', '1'), ('Location E', 'Location H', '4'),
-# ('Location E', 'Sewage Treatment Plant', '4'),
-# ('Location G', 'Location A', '4')] or
-# [('Sewage Treatment Plant', 'Location A', '35'),
-# ('Location A', 'Location B', '2'),
-# ('Location A', 'Location C', '4'), ('Location B', 'Location D', '4'),
-# ('Location D', 'Location E', '1'), ('Location D', 'Location F', '1'),
-# ('Location D', 'Location G', '1'), ('Location E', 'Location H', '4')] or
-# [('Location D', 'Location E', '1'), ('Location D', 'Location F', '1'),
-# ('Location D', 'Location G', '1'), ('Location E', 'Location H', '4'),
-# ('Location E', 'Sewage Treatment Plant', '4'),
-# ('Location G', 'Location A', '4'), ('Location A', 'Location B', '2'),
-# ('Location A', 'Location C', '4')])
 
 # testing prim's on a graph with
 # all vertices NOT present in both the to_vert and the from_vert positions
