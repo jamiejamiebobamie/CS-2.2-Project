@@ -93,7 +93,7 @@ if __name__ == "__main__":
     new_graph = LLGraph(vertices)
     new_graph.addEdges(edges)
 
-    # get a refeence to the LinkedList object
+    # get a reference to the LinkedList object
     # that is the sewage treatment plant
     sewage_plant = None
     for v in new_graph.vertices:
@@ -129,7 +129,7 @@ if __name__ == "__main__":
         new_graph.addEdges(edges)
         print("\nusing data from: graph_data.txt")
 
-    # get a refeence to the LinkedList object
+    # get a reference to the LinkedList object
     # that is the sewage treatment plant
     sewage_plant = None
     for v in new_graph.vertices:
